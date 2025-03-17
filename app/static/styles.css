@@ -120,6 +120,20 @@ body.dark-theme .theme-switch-label {
     align-items: center;
 }
 
+@media (max-width < 767px) {
+    .theme-switcher {
+        position: static; /* Сбрасываем абсолютное позиционирование */
+        margin-left: auto; /* Прижимаем слайдер к правому краю */
+        margin-right: 20px; /* Отступ справа */
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
 /* Тёмная тема */
 body.dark-theme {
     background-color: #121212;

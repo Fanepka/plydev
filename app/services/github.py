@@ -32,4 +32,13 @@ class GitHubService:
             raise Exception(f"Ошибка при загрузке репозиториев: {response.status_code}")
 
         repos = response.json()
-        return [repo for repo in repos if not repo["fork"]]  # Исключаем форки
+        return [
+            {
+                "name": repo["name"],
+                "description": repo["description"],
+                "html_url": repo["html_url"],
+                "stargazers_count": repo["stargazers_count"],
+            }
+            for repo in repos
+            if not repo["fork"] and repo["name"] != self.username  # Исключаем форки и репозиторий профиля
+        ]

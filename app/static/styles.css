@@ -1,40 +1,27 @@
+/* Общие стили */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #F5F5F5;
-    color: #000000;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    background-color: #FFFFFF;
+    color: #202124;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 header {
-    background-color: #800000;
     padding: 20px;
     text-align: center;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    background-color: #1A73E8;
+    color: #FFFFFF;
+    transition: background-color 0.3s;
 }
 
 nav a {
     color: #FFFFFF;
     text-decoration: none;
+    margin: 0 15px;
     font-size: 1.1rem;
     transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #FFA500;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
 }
 
 .hero {
@@ -43,24 +30,16 @@ nav a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #800000, #FFA500);
+    text-align: center;
+    background: linear-gradient(135deg, #1A73E8, #34A853);
     color: #FFFFFF;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    color: #FFD700;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .cta-button {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #FFA500;
+    background-color: #34A853;
     color: #FFFFFF;
     text-decoration: none;
     border-radius: 5px;
@@ -68,158 +47,22 @@ nav a:hover {
 }
 
 .cta-button:hover {
-    background-color: #FF8C00;
+    background-color: #2E8B47;
 }
 
-section {
-    padding: 50px 20px;
-}
-
-.about, .projects, .contact {
-    background-color: #FFFFFF;
-    color: #000000;
-    text-align: center;
-}
-
-.skills ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-.skills li {
-    padding: 10px 20px;
-    background-color: #800000;
-    color: #FFFFFF;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.skills li:hover {
-    background-color: #FFA500;
-}
-
-.skill-description {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #FFFFFF;
-    border: 1px solid #800000;
-    border-radius: 5px;
-    display: none;
-}
-
-.skill-description.active {
-    display: block;
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-.project-card {
-    background-color: #FFFFFF;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-.project-link {
-    color: #FFA500;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.readme-content {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #F5F5F5;
-    border-radius: 5px;
-    max-height: 200px;
-    overflow-y: auto;
-}
-
-.readme-content h1, .readme-content h2, .readme-content h3 {
-    color: #800000;
-}
-
-.readme-content a {
-    color: #FFA500;
-    text-decoration: none;
-}
-
-.readme-content a:hover {
-    text-decoration: underline;
-}
-
-.contact {
-    background-color: #800000;
-    color: #FFFFFF;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-form input, form textarea, form button {
-    margin: 10px 0;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    width: 100%;
-    max-width: 400px;
-}
-
-form button {
-    background-color: #FFA500;
-    color: #FFFFFF;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #FF8C00;
-}
-
-.social-links a {
-    color: #FFD700;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-#about-content {
-    text-align: left; 
-    max-width: 800px;
-    margin: 0 auto; 
-    padding: 20px;
-}
-
-#about-content img {
-    display: inline-block;
-    margin: 5px; 
-    height: auto; 
-    max-width: 100%; 
-}
-
-
+/* Переключатель темы */
 .theme-switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 40px;
+    height: 24px;
+    margin-left: 10px;
 }
 
 .theme-switch input {
@@ -237,33 +80,50 @@ form button:hover {
     bottom: 0;
     background-color: #ccc;
     transition: 0.4s;
-    border-radius: 34px;
+    border-radius: 24px;
 }
 
 .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
     background-color: white;
     transition: 0.4s;
     border-radius: 50%;
 }
 
 input:checked + .slider {
-    background-color: #2196F3;
+    background-color: #1A73E8;
 }
 
 input:checked + .slider:before {
-    transform: translateX(26px);
+    transform: translateX(16px);
+}
+
+/* Подсказка для переключателя */
+.theme-switch-label {
+    font-size: 0.9rem;
+    margin-left: 10px;
+    color: #FFFFFF;
+}
+
+body.dark-theme .theme-switch-label {
+    color: #E8EAED;
+}
+
+/* Контейнер для переключателя */
+.theme-switch-container {
+    display: flex;
+    align-items: center;
 }
 
 /* Тёмная тема */
 body.dark-theme {
     background-color: #121212;
-    color: #ffffff;
+    color: #E8EAED;
 }
 
 body.dark-theme header {
@@ -271,19 +131,145 @@ body.dark-theme header {
 }
 
 body.dark-theme nav a {
-    color: #ffffff;
+    color: #E8EAED;
 }
 
 body.dark-theme .hero {
     background: linear-gradient(135deg, #1A1A1A, #333333);
-    color: #ffffff;
+    color: #E8EAED;
 }
 
 body.dark-theme .cta-button {
-    background-color: #2196F3;
-    color: #ffffff;
+    background-color: #34A853;
+    color: #E8EAED;
 }
 
 body.dark-theme .cta-button:hover {
-    background-color: #1976D2;
+    background-color: #2E8B47;
+}
+
+/* Footer */
+footer {
+    background-color: #1A73E8;
+    color: #FFFFFF;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+}
+
+.social-icon {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0) invert(1); /* Делаем иконку белой */
+    transition: filter 0.3s;
+}
+
+body.dark-theme .social-icon {
+    filter: brightness(0) invert(0); /* Возвращаем оригинальный цвет на тёмной теме */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Тёмная тема для footer */
+body.dark-theme footer {
+    background-color: #1A1A1A;
+    color: #E8EAED;
+}
+
+/* Стили для проектов */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #1A73E8;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.project-link:hover {
+    background-color: #1557B0;
+}
+
+body.dark-theme .project-card {
+    background-color: #1A1A1A;
+    color: #E8EAED;
+}
+
+body.dark-theme .project-link {
+    background-color: #34A853;
+}
+
+body.dark-theme .project-link:hover {
+    background-color: #2E8B47;
+}
+
+.repo-stats {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+body.dark-theme .repo-stats {
+    color: #E8EAED;
+}
+
+.stars {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
 }

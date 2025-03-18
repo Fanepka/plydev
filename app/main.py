@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 from os import getenv
 
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, Response
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -49,3 +49,7 @@ async def read_projects(request: Request):
 @app.get("/contact", response_class=HTMLResponse)
 async def read_contact(request: Request):
     return templates.TemplateResponse("contact.html", {"request": request})
+
+@app.head("/")
+async def get_head(request: Request):
+    return Response(status_code=200)
